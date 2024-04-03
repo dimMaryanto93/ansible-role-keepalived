@@ -1,4 +1,4 @@
-`dimmaryanto93.haproxy`
+`dimmaryanto93.keepalived`
 =========
 
 This ansible role to help you install HAProxy for supported platform:
@@ -35,7 +35,7 @@ Ada beberapa variable yang temen-temen bisa gunakan untuk setting docker daemon,
 
 | Variable name                    | Example value  | Description |
 | :---                             | :---           | :---        |
-| `haproxy_version`                | `*1.8.27*`     | Install specific version, if you want install latest keep it blank |
+| `keepalived_version`                | `*2.1.5*`     | Install specific version, if you want install latest keep it blank |
 
 
 Example Playbook
@@ -44,11 +44,11 @@ Example Playbook
 Including an example of how to use your role (for instance, with variables passed in as parameters) is always nice for users too:
 
 ```yaml
-- name: Install HAProxy loadbalancer
+- name: Install keepalived
   hosts: ['all']
   become: true
   roles: 
-    - dimmaryanto93.haproxy
+    - dimmaryanto93.keepalived
 ```
 
 License
