@@ -1,0 +1,10 @@
+### vscode
+.vscode
+
+### vim
+*.swp
+
+### Mac OS
+DS_Store
+
+### default env

@@ -1,0 +1,22 @@
+---
+- name: Install dependencies for keepalived
+  package:
+    name: "{{ item }}"
+    state: present
+  loop:
+    - iptables
+    
+- name: Ensure keepalived is installed.
+  package: 
+    name: keepalived{{ keepalived_version }}
+    state: present
+
+- name: Get keepalived version.
+  command: keepalived --version
+  register: keepalived_version_result
+  changed_when: false
+  check_mode: false
+
+- name: Debug version of keepalived
+  debug:
+    msg: "{{ keepalived_version_result.stdout }}"

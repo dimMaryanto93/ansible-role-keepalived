@@ -1,0 +1,6 @@
+---
+- name: Install keepalived
+  hosts: ['all']
+  become: true
+  roles: 
+    - ../../ansible-role-keepalived
